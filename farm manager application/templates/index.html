@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphaels Farm</title>
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/style.css')}}">
+</head>
+<body>
+    <div>welcome to Raphaels Farm Manager </div>
+    <div>here, you can keep track of which animals are currently aviliable</div>
+    <div> whenever you sell an animal, just select it and click "mark as sold"</div>
+    <div> if you get more animals, select which one you got from the database and add it to the list of availiable animals </div>
+
+    <div id="img">
+        <img src="https://images.twinkl.co.uk/tr/raw/upload/u/ux/farm-animals_ver_1.png" alt="Raphaels farm logo">
+    </div>
+    <div id="remove_animal">
+        <form action="/remove_animal" method="post">
+            {%for item in food_items%}
+            <input type="checkbox" name = "sold", id = "{{item}}" value = "{{item}}"">
+            <label for="{{items}}" name = "{{item}}">{{item}}</label> <br>
+            {%endfor%}
+
+            <input type="submit" value="MARK AS SOLD" id="delete">
+            
+        </form>
+
+
+    </div>
+    <div id="add_item">
+        <form action="/add_items" method="POST">
+            <select name="select_food"> 
+            {% for item in all_items%}
+            <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}  
+            <input type="submit" value=" ADD ANIMAL" id="add"> 
+            
+
+        </form>
+    </div>
+    <div id= "p1"> Insert a new animal that is not already in the databse</div>
+    <div class="insert_item">
+        <form action="/add_to_db" method="post">
+            <table>
+                <tr><td>Add Animal(only text)</td><td> <input type="text" name="Name"></td></tr>
+                <tr><td>How Many?(only numbers)</td><td> <input type="text" name="number"></td></tr>
+                <tr><td> <input type="submit" value="Add To Database"></td></tr>
+            </table>
+        </form>
+    </div> 
+    <div> .</div>
+    <div id="p2">To delete Animal from Database, insert Animal name below</div>
+    <div class="delete_item">
+        <form action="/del_from_db" method="post">
+            <table>
+                <tr><td>What Animal</td><td> <input type="text" name="DelName"></td></tr>
+                <tr><td> <input type="submit" value="Delete from Database"></td></tr>
+            </table>
+        </form>
+    </div>
+    
+    
+</body>
+</html>

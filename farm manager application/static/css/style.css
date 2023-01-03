@@ -1,0 +1,96 @@
+body{
+    font-family: "Raleway";
+    font-size: 2em;
+    text-align: center;
+}
+
+img{
+    width: 400px;
+    padding: 20px;
+}
+#img{
+    background-color: rgb(154, 63, 29);
+}
+label{
+    margin:30px 10px ;
+}
+
+#remove_animal{
+    background-color:rgb(187, 93, 46) ;
+    color: rgb(202, 234, 234);
+    font-size: large;
+}
+
+#delete{
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 5px solid whitesmoke;
+    margin: 10px;
+    padding: 10px 10px;
+    cursor:pointer;
+}
+
+
+#add{
+    background-color:khaki ;
+    color:black;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid rgb(182, 229, 238);
+    margin: 8px;
+    padding: 8px 8px;
+    cursor:pointer;
+}
+
+select{
+    font-family: "Raleway";
+    font-size: 1em;
+    text-align: center;
+    padding: 5px 0;
+    margin: 40px 10px;
+    border: 2px solid darkgray;
+    width: 200px;
+}
+
+#add:hover{
+    background-color: rgb(61, 230, 177);
+}
+
+div{
+    font-family: "Raleway";
+    color: aqua;
+    font-size: small;
+    text-align: center;
+    background-color:rgb(2, 62, 62);
+
+}
+
+.insert_item{
+    display: flex;
+    justify-content: center;
+}
+
+.delete_item{
+    display: flex;
+    justify-content: center;
+}
+
+#p1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;
+    font-size: small;
+    text-align: center;
+    background-color:rgb(2, 62, 62);
+
+}
+
+#p2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;
+    font-size: small;
+    text-align: center;
+    background-color:rgb(2, 62, 62);
+
+}

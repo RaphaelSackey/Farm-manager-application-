@@ -1,0 +1,19 @@
+body{
+    font-family: "Raleway";
+    font-size: 2em;
+    text-align: center;
+}
+
+img{
+    background-color:blue;
+    width: 400px;
+    padding: 20px;
+}
+
+label{
+    margin:30px 10px ;
+}
+
+#remove_animal{
+    background-color:lightcoral ;
+}
